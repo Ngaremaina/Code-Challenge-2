@@ -36,8 +36,8 @@ function BookDetail(){
                     <div className="col-sm-4 ">
                         <img className="img-fluid" style={{maxHeight:"502px", maxWidth:"450px", float:"left",marginRight:"20px"}} src={cover} alt={title}/>
                         
-                        {/* <Link className="btn btn-info mt-3 mb-4" to={`/editbook/${id}`}>Edit Book</Link> */}
-                        <button className = "btn btn-danger mt-3 mb-4" style={{float: "right"}}onClick={handleDelete}>Delete Book</button>
+                        <Link to={`/editbook/${id}`}>Edit Book</Link>
+                        <button style={{float: "right"}}onClick={handleDelete}>Delete Book</button>
                     </div>
                     <div className="col-sm-8">
                         <p style={{marginTop:"20px"}}>{title}</p>

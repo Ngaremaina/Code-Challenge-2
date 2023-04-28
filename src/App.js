@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import BookList from './components/BookList';
+import NewBook from './components/NewBook';
 
 
 function App() {
@@ -13,13 +14,17 @@ function App() {
     .then(data => setBook(data))
   },[])
 
-  
 
+  //adding book to the server
+  const addBook = (newbook)=>{
+    setBook([...books, newbook])
+  }
 
   return (
   
     <div className='mybooks'>
-     <BookList books = {books} />
+      <BookList books = {books} />
+      <NewBook addBook={addBook}/>
 
     </div>
   );

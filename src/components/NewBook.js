@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function NewBook({addBook}){
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     const [title, setTitle] = useState("")
     const [subtitle, setSubtitle] = useState("")
@@ -43,6 +43,7 @@ function NewBook({addBook}){
 
         navigate('/');
         
+        
     }
 
     function setInputClear(){
@@ -61,7 +62,7 @@ function NewBook({addBook}){
     }
     return (
         <form className="addBook" onSubmit={handleSubmit}>
-           <h1>Add Book</h1>
+           <h1 style={{textAlign:"center"}}>Add Book</h1>
            <label for="cover">Cover</label>
             <input type="text" className="form-control" id="cover" value = {cover} placeholder="https://www.jkrowling.com/wp-content/uploads/2016/10/HPATPS_Hero_OnGrey.png" onChange={e => setCover(e.target.value)}/>
 

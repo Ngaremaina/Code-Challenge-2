@@ -40,7 +40,7 @@ function App() {
         <Route exact path='/'><BookList books = {books} /></Route>
         <Route exact path='/addbook'><NewBook myBook={myBook} /></Route>
         <Route path='/:id'><BookDetail /></Route>
-        <Route path='/editbook/:id'><EditBook myBook={myBook}/></Route>
+        {/* <Route path='/editbook/:id'><EditBook myBook={myBook}/></Route> */}
       </Switch>
     </div>
   );

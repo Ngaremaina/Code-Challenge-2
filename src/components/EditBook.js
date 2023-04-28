@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { useParams,useHistory } from "react-router-dom";
 
-function EditBook({addBook}){
+function EditBook({myBook}){
     //declaring the params function
     const params= useParams()
     console.log(params)
     const { id } = useParams()
     //declaring the navigate function
-    const navigate = useNavigate()
+    const navigate = useHistory()
     //declaring our object variables
     const [title, setTitle] = useState("")
     const [subtitle, setSubtitle] = useState("")
@@ -42,7 +43,7 @@ function EditBook({addBook}){
             body:JSON.stringify(editbook)
         })
         .then(res => res.json())
-        .then(data => addBook(data))
+        .then(data => myBook(data))
 
         //clearing the input fields
         setInputClear()

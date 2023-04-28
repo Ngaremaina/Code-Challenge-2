@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 
 function BookDetail(){
     //declaring the variables
     const [book, setBook] = useState("");
+    const history = useHistory()
     const {title, subtitle, author, published, publisher, pages, price, quantity, sold, description, cover} = book
     const { id } = useParams()
 
@@ -25,6 +25,7 @@ function BookDetail(){
         })
         .then(res => res.json())
         .then(data => setBook(data))
+        history.push('/')
     }
     
     //rendering the details of the book
@@ -34,7 +35,7 @@ function BookDetail(){
             <div>
                 <div>
                     <div className="col-sm-4 ">
-                        <img className="img-fluid" style={{maxHeight:"502px", maxWidth:"450px", float:"left",marginRight:"20px"}} src={cover} alt={title}/>
+                        <img style={{maxHeight:"502px", maxWidth:"450px", float:"left",marginRight:"20px"}} src={cover} alt={title}/>
                         
                         <Link to={`/editbook/${id}`}>Edit Book</Link>
                         <button style={{float: "right"}}onClick={handleDelete}>Delete Book</button>

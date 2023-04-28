@@ -41,7 +41,7 @@ function NewBook({addBook}){
 
         setInputClear()
 
-        navigate('/');
+        navigate.push('/');
         
         
     }

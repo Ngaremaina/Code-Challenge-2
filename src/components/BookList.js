@@ -7,11 +7,9 @@ function BookList({books}){
     })
 
     return (
-        
         <div className="card-body">
             {displayBooks}
-        </div>
-        
+        </div>  
     )
 
 }

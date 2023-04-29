@@ -5,6 +5,7 @@ import NewBook from './components/NewBook';
 import { Switch, Route } from 'react-router-dom';
 import BookDetail from './components/BookDetails';
 import EditBook from './components/EditBook';
+import Header from './components/Header';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
   return (
   
     <div className='mybooks'>
+      <Header />
       <Switch>
         <Route exact path='/'><BookList books = {books} /></Route>
         <Route exact path='/addbook'><NewBook myBook={myBook} /></Route>

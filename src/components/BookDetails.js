@@ -34,11 +34,10 @@ function BookDetail(){
 
             <div>
                 <div>
-                    <div className="col-sm-4 ">
+                    <div>
                         <img style={{maxHeight:"502px", maxWidth:"450px", float:"left",marginRight:"20px"}} src={cover} alt={title}/>
                         
-                        <Link to={`/editbook/${id}`}>Edit Book</Link>
-                        <button style={{float: "right"}}onClick={handleDelete}>Delete Book</button>
+                        
                     </div>
                     <div className="col-sm-8">
                         <p style={{marginTop:"20px"}}>{title}</p>
@@ -52,12 +51,15 @@ function BookDetail(){
                         <p>Publisher: {publisher}</p>
                         <p>{pages} pages </p>
                         
-                        <button type="button" className="btn btn-primary mt-4" style={{width:"100%", marginBottom:"30px"}}>Add To Cart</button>
+                        <button type="button" className="addtocart" style={{marginBottom:"30px"}}>Add To Cart</button>
 
                     </div> 
-                   
+                    <Link className = "detail-link"to={`/editbook/${id}`}>Edit Book</Link>
+                    <button className="delete" onClick={handleDelete}>Delete Book</button>    
+                    
                 </div>
-            </div>           
+            </div>     
+              
         </div>
        
     )

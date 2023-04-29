@@ -52,10 +52,12 @@ function BookDetail(){
                         <p>{pages} pages </p>
                         
                         <button type="button" className="addtocart" style={{marginBottom:"30px"}}>Add To Cart</button>
-
+                        
+                        
                     </div> 
                     <Link className = "detail-link"to={`/editbook/${id}`}>Edit Book</Link>
-                    <button className="delete" onClick={handleDelete}>Delete Book</button>    
+                    <button className="delete" onClick={handleDelete}>Delete Book</button> 
+                       
                     
                 </div>
             </div>     

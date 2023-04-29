@@ -23,21 +23,21 @@ function App() {
   
     return () => clearInterval(interval);
   }, []);
-  // useEffect(() => {
-  //   fetch("http://localhost:4000/books")
-  //   .then(res => res.json())
-  //   .then(data => setBook(data))
-  // },[])
 
   //adding book to the server
   const myBook = (mybook)=>{
     setBook([...books, mybook])
   }
+  //searching book by its title
+  const searchBook = (search) => {
+    const fetchResults = books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
+    return setBook(fetchResults)
+  }
 
   return (
   
     <div className='mybooks'>
-      <Header />
+      <Header searchBook = {searchBook}/>
       <Switch>
         <Route exact path='/'><BookList books = {books} /></Route>
         <Route exact path='/addbook'><NewBook myBook={myBook} /></Route>

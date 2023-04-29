@@ -108,3 +108,8 @@
   background-color: #04AA6D;
   color: white;
 }
+.topnav-right{
+  float: right;
+  position: relative;
+  height: 100%;
+}

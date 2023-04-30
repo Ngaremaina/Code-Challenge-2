@@ -35,14 +35,14 @@ function Contact({addMessage}){
     }
     return (
         <form className="addBook" onSubmit={handleSubmit}>
-           <h1 style={{textAlign:"center"}}>Add Book</h1>
+           <h1 style={{textAlign:"center"}}>Contact Us</h1>
            <label for="name">Name</label>
             <input type="text" id="name" value = {name} placeholder="John Doe" onChange={e => setName(e.target.value)}/>
 
-            <label for="title" >Title</label>
+            <label for="email">Email</label>
             <input type="text" id="email" value={email} placeholder="johndoe@example.com" onChange={e => setEmail(e.target.value)}/>
 
-            <label for="subtitle">Subtitle</label>
+            <label for="subtitle">Message</label>
             <textarea type="text" id="message" value={message} placeholder="Message..." onChange={e => setMessage(e.target.value)}></textarea>
 
             <button type="submit">Submit</button>

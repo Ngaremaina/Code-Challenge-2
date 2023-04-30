@@ -13,6 +13,7 @@ function Header({searchBook}){
         <div class="topnav">
             <Link className="nav-link" to='/'>Home</Link>
             <Link className="nav-link" to='/addbook'>Add Book</Link>
+            <Link className="nav-link" to='/contact us'>Contact Us</Link>
             <div class="topnav-right">
             <form class="search" id="search" onSubmit={handleSubmit}>
                 <input type="text"id="searchname" placeholder="Search by the Book Title"value={search} onChange={e => setSearch(e.target.value)} />

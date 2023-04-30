@@ -13,19 +13,17 @@ The pictures as shown depict the outlook of the web app
 ![Add Book](./media/AddBook.png)
 
 
-
-
 # Getting Started #
 To run this application:
 
-*Clone from [here](https://github.com/Ngaremaina/Vitabu)
+*Clone from [here](https://github.com/Ngaremaina/Code-Challenge-2)
 
 *Run this command: json-server --watch db.json -p 4000
 
 *Run this command: npm start
 
 # To view the published HTML as a website #
-To visit this website, click on the link [here](https://vitabuapp.netlify.app/) and ensure that the json server is running.
+To visit this website, click on the link [here](https://github.com/Ngaremaina/Code-Challenge-2) and ensure that the json server is running.
 
 
 # Author #

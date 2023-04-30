@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import BookDetail from './components/BookDetails';
 import EditBook from './components/EditBook';
 import Header from './components/Header';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route exact path='/addbook'><NewBook myBook={myBook} /></Route>
         <Route path='/:id'><BookDetail /></Route>
         <Route path='/editbook'><EditBook myBook={myBook}/></Route>
+        <Route path='/contact us'><Contact /></Route>
       </Switch>
       {/* <EditBook /> */}
     </div>

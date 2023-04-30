@@ -29,6 +29,9 @@ function App() {
   const myBook = (mybook)=>{
     setBook([...books, mybook])
   }
+  //  const addMessage = (message) => {
+  //   setMessage([...mesages, message])
+  //  }
   //searching book by its title
   const searchBook = (search) => {
     const fetchResults = books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
@@ -42,9 +45,11 @@ function App() {
       <Switch>
         <Route exact path='/'><BookList books = {books} /></Route>
         <Route exact path='/addbook'><NewBook myBook={myBook} /></Route>
-        <Route path='/:id'><BookDetail /></Route>
+        <Route exact path='/contacts'><Contact /></Route>
+        <Route exact path='/:id'><BookDetail /></Route>
+        {/* <Route path='/:id'><BookDetail /></Route>
         <Route path='/editbook'><EditBook myBook={myBook}/></Route>
-        <Route path='/contact us'><Contact /></Route>
+        <Route exact path='/contacts'><Contact /></Route> */}
       </Switch>
       {/* <EditBook /> */}
     </div>

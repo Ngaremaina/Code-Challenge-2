@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Contact({addMessage}){
-    const navigate = useNavigate()
+    const navigate = useHistory()
 
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
@@ -25,7 +25,7 @@ function Contact({addMessage}){
         .then(data => addMessage(data))
         setInputClear()
 
-        navigate('/');
+        navigate.push('/');
     }
     function setInputClear(){
         setName("")

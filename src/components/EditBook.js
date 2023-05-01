@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams,useHistory } from "react-router-dom";
 
-function EditBook({myBook}){
+function EditBook({editBook}){
     //declaring the params function
     const params= useParams()
     console.log(params)
@@ -37,18 +37,18 @@ function EditBook({myBook}){
             cover:cover
         }
         //patching object to the server
-        fetch(`http://localhost:3000/books/${id}`,{
-            method:"PATCH",
+        fetch(`http://localhost:4000/books/${id}`,{
+            method:"PUT",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(editbook)
         })
         .then(res => res.json())
-        .then(data => myBook(data))
+        .then(data => editBook(data))
 
         //clearing the input fields
         setInputClear()
         //Navigate to the home page
-        navigate('/');
+        navigate.push('/');
         
     }
 
@@ -68,7 +68,7 @@ function EditBook({myBook}){
     }
     return (
         <form className="addBook" onSubmit={handleSubmit}>
-           <h1 style={{textAlign:"center"}}>Add Book</h1>
+           <h1 style={{textAlign:"center"}}>Edit Book</h1>
            <label for="cover">Cover</label>
             <input type="text" className="form-control" id="cover" value = {cover} placeholder="https://www.jkrowling.com/wp-content/uploads/2016/10/HPATPS_Hero_OnGrey.png" onChange={e => setCover(e.target.value)}/>
 

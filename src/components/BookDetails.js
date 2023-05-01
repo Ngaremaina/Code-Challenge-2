@@ -55,7 +55,7 @@ function BookDetail(){
                         
                         
                     </div> 
-                    <Link className = "detail-link"to={`/editbook/${id}`}>Edit Book</Link>
+                    <Link className = "detail-link" to={`/editbook/${id}`}>Edit Book</Link>
                     <button className="delete" onClick={handleDelete}>Delete Book</button> 
                        
                     

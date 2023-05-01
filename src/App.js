@@ -20,18 +20,19 @@ function App() {
       .then(data => setBook(data))
         
       .catch(err => console.error(err));
-    }, 1000); //set your time here. repeat every 5 seconds
+    }, 2000); //set your time here. repeat every 5 seconds
   
     return () => clearInterval(interval);
   }, []);
 
   //adding book to the server
-  const myBook = (mybook)=>{
-    setBook([...books, mybook])
+  const addBook = (newbook)=>{
+    setBook([...books, newbook])
   }
-  //  const addMessage = (message) => {
-  //   setMessage([...mesages, message])
-  //  }
+ 
+  const editBook = (editbook) => {
+    setBook([...books, editbook])
+  }
   //searching book by its title
   const searchBook = (search) => {
     const fetchResults = books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
@@ -44,9 +45,10 @@ function App() {
       <Header searchBook = {searchBook}/>
       <Switch>
         <Route exact path='/'><BookList books = {books} /></Route>
-        <Route exact path='/addbook'><NewBook myBook={myBook} /></Route>
+        <Route exact path='/addbook'><NewBook addBook={addBook} /></Route>
         <Route exact path='/contacts'><Contact /></Route>
         <Route exact path='/:id'><BookDetail /></Route>
+        <Route exact path='/editbook/:id'><EditBook myBook={editBook} /></Route>
         {/* <Route path='/:id'><BookDetail /></Route>
         <Route path='/editbook'><EditBook myBook={myBook}/></Route>
         <Route exact path='/contacts'><Contact /></Route> */}

@@ -13,7 +13,7 @@ function Header({searchBook, sortByTitle}){
         <div class="topnav">
             <Link className="nav-link" to='/'>Home</Link>
             <Link className="nav-link" to='/addbook'>Add Book</Link>
-            <Link className="nav-link" to='/contacts'>Contact Us</Link>
+            <Link className="nav-link" to='/contact us'>Contact Us</Link>
             <button className="buttonTitle" onClick={sortByTitle} style={{float: 'right'}}><i class="fa fa-sort"></i></button>
             <div class="topnav-right">
                 <form class="search" id="search" onSubmit={handleSubmit}>

@@ -7,6 +7,7 @@ import BookDetail from './components/BookDetails';
 import EditBook from './components/EditBook';
 import Header from './components/Header';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -53,12 +54,12 @@ function App() {
       <Switch>
         <Route exact path='/'><BookList books = {books} /></Route>
         <Route exact path='/addbook'><NewBook addBook={addBook} /></Route>
-        <Route exact path='/contacts'><Contact /></Route>
+        <Route exact path='/contact us'><Contact /></Route>
         <Route exact path='/:id'><BookDetail /></Route>
         <Route exact path='/editbook/:id'><EditBook myBook={editBook} /></Route>
         
       </Switch>
-      {/* <EditBook /> */}
+      <Footer />
     </div>
   );
 }

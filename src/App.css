@@ -19,7 +19,20 @@
   font-size: 22px;
   
 }
-
+.btn button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 15px;
+  
+  
+}
 .button {
   border: none;
   outline: 0;

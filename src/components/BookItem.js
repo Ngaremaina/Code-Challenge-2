@@ -12,7 +12,7 @@ function BookItem({id, cover, title, price}){
             <p className="price">Kshs. {price}</p>
             <Link className="link" to={`/${id}`}>Show details</Link>
             <div className="btn">
-                <button className="button">Add To Cart</button>
+                <button>Add To Cart</button>
             </div>
         </div>
     )

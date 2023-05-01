@@ -20,17 +20,18 @@
   
 }
 
-.card button {
+.button {
   border: none;
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #000;
+  background-color: blue;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
   margin-top: 15px;
+  border-radius: 12px;
   
 }
 
@@ -74,15 +75,11 @@
 
 .delete{
   background-color: red;
-  padding: 5px;
+  padding: 10px;
   float: right;
-  margin: 3px;
-}
-
-.addtocart{
-  background-color: white;
-  color: #000;
-  padding: 5px;
+  margin-right: 20px;
+  font-size: 18px;
+  border-radius: 12px;
 }
 
 .topnav {
@@ -112,4 +109,43 @@
   float: right;
   position: relative;
   height: 100%;
+}
+
+
+.search{
+  padding: 8px;
+}
+
+.search input{
+  padding: 5px;
+}
+
+.search button{
+  padding: 5px;
+}
+
+.submit{
+  padding: 10px;
+  margin-top: 10px;
+  background-color: blue;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.submit:hover{
+  background-color: #04AA6D;
+}
+
+.addtocart{
+  margin: 5px;
+  width: 20%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: blue;
+  border-radius: 12px;
+}
+
+.addtocart:hover{
+  background-color: #333;
 }

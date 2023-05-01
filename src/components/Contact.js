@@ -45,7 +45,7 @@ function Contact({addMessage}){
             <label for="subtitle">Message</label>
             <textarea type="text" id="message" value={message} placeholder="Message..." onChange={e => setMessage(e.target.value)}></textarea>
 
-            <button type="submit">Submit</button>
+            <button class="submit" type="submit">Submit</button>
 
         </form>
 

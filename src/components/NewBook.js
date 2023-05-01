@@ -96,7 +96,7 @@ function NewBook({addBook}){
             <label for="pages" >Pages</label>
             <input type="number" id="pages" value={pages} placeholder="205" onChange={e => setPages(e.target.value)}/>
 
-            <button type="submit">Submit</button>
+            <button class="submit" type="submit">Submit</button>
         </form>     
     )
 

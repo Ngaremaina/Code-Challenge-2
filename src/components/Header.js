@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-function Header({searchBook}){
+function Header({searchBook, sortByTitle}){
     const [search, setSearch] = useState("")
     //passing the submit function that listens for the submit event listener
     const handleSubmit = (e) => {
@@ -14,12 +14,14 @@ function Header({searchBook}){
             <Link className="nav-link" to='/'>Home</Link>
             <Link className="nav-link" to='/addbook'>Add Book</Link>
             <Link className="nav-link" to='/contacts'>Contact Us</Link>
+            <button className="buttonTitle" onClick={sortByTitle} style={{float: 'right'}}><i class="fa fa-sort"></i></button>
             <div class="topnav-right">
-            <form class="search" id="search" onSubmit={handleSubmit}>
-                <input type="text"id="searchname" placeholder="Search by the Book Title"value={search} onChange={e => setSearch(e.target.value)} />
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>  
+                <form class="search" id="search" onSubmit={handleSubmit}>
+                    <input type="text"id="searchname" placeholder="Search by the Book Title"value={search} onChange={e => setSearch(e.target.value)} />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            
+            </div>  
         </div>
     )
 

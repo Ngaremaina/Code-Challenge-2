@@ -30,39 +30,33 @@ function BookDetail(){
     
     //rendering the details of the book
     return(
-        <div>
-
+        
+        <div className="details">
             <div>
-                <div>
-                    <div>
-                        <img style={{maxHeight:"502px", maxWidth:"450px", float:"left",marginRight:"20px"}} src={cover} alt={title}/>
-                        
-                        
-                    </div>
-                    <div className="col-sm-8">
-                        <p style={{marginTop:"20px"}}>{title}</p>
-                        <p>{subtitle}</p>
-                        <p>by {author}</p>
-                        <p>Kshs. {price}</p>
-                        <p>Available copies: {quantity - sold}</p>
-                        <p>Description</p>
-                        <p>{description}</p>
-                        <p>Publish Date: {published}</p>
-                        <p>Publisher: {publisher}</p>
-                        <p>{pages} pages </p>
-                        
-                        <button type="button" className="addtocart" style={{marginBottom:"30px"}}>Add To Cart</button>
-                        
-                        
-                    </div> 
-                    <Link className = "detail-link" to={`/editbook/${id}`}>Edit Book</Link>
-                    <button className="delete" onClick={handleDelete}>Delete Book</button> 
-                       
-                    
-                </div>
-            </div>     
-              
+                <img style={{maxHeight:"502px", maxWidth:"450px", float:"left",marginRight:"20px"}} src={cover} alt={title}/>
+            </div>
+            <div className="col-sm-8">
+                <p style={{marginTop:"20px"}}>{title}</p>
+                <p>{subtitle}</p>
+                <p>by {author}</p>
+                <p>Kshs. {price}</p>
+                <p>Available copies: {quantity - sold}</p>
+                <p>Description</p>
+                <p>{description}</p>
+                <p>Publish Date: {published}</p>
+                <p>Publisher: {publisher}</p>
+                <p>{pages} pages </p>
+                
+                <button type="button" className="addtocart" style={{marginBottom:"30px"}}>Add To Cart</button>
+                
+                
+            </div> 
+            <Link className = "detail-link" to={`/editbook/${id}`}>Edit Book</Link>
+            <button className="delete" onClick={handleDelete}>Delete Book</button> 
+                
+            
         </div>
+            
        
     )
 

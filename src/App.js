@@ -20,7 +20,7 @@ function App() {
       .then(data => setBook(data))
         
       .catch(err => console.error(err));
-    }, 2000); //set your time here. repeat every 5 seconds
+    }, 2500); //set your time here. repeat every 5 seconds
   
     return () => clearInterval(interval);
   }, []);
@@ -39,19 +39,24 @@ function App() {
     return setBook(fetchResults)
   }
 
+
+  //Sorting the books by title
+  function sortByTitle() {
+    const sortedBooks = [...books].sort((a, b) => a.title.localeCompare(b.title));
+    setBook(sortedBooks);
+  }
+
   return (
   
     <div className='mybooks'>
-      <Header searchBook = {searchBook}/>
+      <Header searchBook = {searchBook} sortByTitle={sortByTitle}/>
       <Switch>
         <Route exact path='/'><BookList books = {books} /></Route>
         <Route exact path='/addbook'><NewBook addBook={addBook} /></Route>
         <Route exact path='/contacts'><Contact /></Route>
         <Route exact path='/:id'><BookDetail /></Route>
         <Route exact path='/editbook/:id'><EditBook myBook={editBook} /></Route>
-        {/* <Route path='/:id'><BookDetail /></Route>
-        <Route path='/editbook'><EditBook myBook={myBook}/></Route>
-        <Route exact path='/contacts'><Contact /></Route> */}
+        
       </Switch>
       {/* <EditBook /> */}
     </div>

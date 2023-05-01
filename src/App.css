@@ -149,3 +149,18 @@
 .addtocart:hover{
   background-color: #333;
 }
+
+.details{
+  margin: 15px;
+  padding: 10px;
+}
+.buttonTitle{
+  background-color: yellow;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.buttonTitle:hover{
+  background-color: yellowgreen;
+  
+}

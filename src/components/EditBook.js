@@ -4,10 +4,12 @@ import { useParams,useHistory } from "react-router-dom";
 function EditBook({editBook}){
     //declaring the params function
     const params= useParams()
-    console.log(params)
+    // console.log(params)
     const { id } = useParams()
+
     //declaring the navigate function
     const navigate = useHistory()
+
     //declaring our object variables
     const [title, setTitle] = useState("")
     const [subtitle, setSubtitle] = useState("")
@@ -23,6 +25,8 @@ function EditBook({editBook}){
 
     function handleSubmit(e){
         e.preventDefault()
+
+        //creating our object that will hold the data
         const editbook = {
             title:title,
             subtitle:subtitle,
@@ -36,6 +40,7 @@ function EditBook({editBook}){
             pages:pages,
             cover:cover
         }
+
         //patching object to the server
         fetch(`http://localhost:4000/books/${id}`,{
             method:"PUT",

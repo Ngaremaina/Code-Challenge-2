@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 function NewBook({addBook}){
     const navigate = useHistory()
-
+    //declaring our variables
     const [title, setTitle] = useState("")
     const [subtitle, setSubtitle] = useState("")
     const [author, setAuthor] = useState("")
@@ -18,6 +18,7 @@ function NewBook({addBook}){
 
     function handleSubmit(e){
         e.preventDefault()
+        //creating our object to hold the data
         const newbook = {
             title:title,
             subtitle:subtitle,
@@ -31,6 +32,7 @@ function NewBook({addBook}){
             pages:pages,
             cover:cover
         }
+        //adding our object to the server
         fetch("http://localhost:4000/books",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
@@ -40,12 +42,12 @@ function NewBook({addBook}){
         .then(data => addBook(data))
 
         setInputClear()
-
+        //navigarte user to the home page
         navigate.push('/');
         
         
     }
-
+    //set the input fiels to an empty string
     function setInputClear(){
         setCover("")
         setTitle("")
@@ -60,6 +62,7 @@ function NewBook({addBook}){
         setDescription("")
         
     }
+    //display the form 
     return (
         <form className="addBook" onSubmit={handleSubmit}>
            <h1 style={{textAlign:"center"}}>Add Book</h1>

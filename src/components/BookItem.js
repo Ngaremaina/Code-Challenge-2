@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function BookItem({id, cover, title, price}){
-    console.log(id)
+    // console.log(id)
+    //display the cards that contain the image, price and title 
     return (
        
         <div class="card">

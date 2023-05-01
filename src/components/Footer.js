@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
 function Footer(){
+    //displaying the footer
     return(
 
 		<footer class="footer-distributed">
